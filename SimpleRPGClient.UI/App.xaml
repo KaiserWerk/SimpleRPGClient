@@ -1,0 +1,12 @@
+﻿<Application x:Class="SimpleRPGClient.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SimpleRPGClient.UI"
+             xmlns:vm="clr-namespace:SimpleRPGClient.UI.ViewModels"
+             xmlns:converter="clr-namespace:SimpleRPGClient.UI.Converter"
+             StartupUri="views/auth/authwindow.xaml">
+    <Application.Resources>
+        <vm:ViewModelLocator x:Key="Locator" />
+        <converter:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    </Application.Resources>
+</Application>

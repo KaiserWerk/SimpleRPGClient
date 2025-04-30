@@ -1,0 +1,52 @@
+﻿<Window x:Class="SimpleRPGClient.UI.Views.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleRPGClient.UI"
+        xmlns:components="clr-namespace:SimpleRPGClient.UI.Views.Components"
+        mc:Ignorable="d"
+        Title="SimpleRPG (make this a binding)" 
+        Height="450" 
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <components:HeaderUserControl Grid.Row="0" />
+            <components:MapFieldUserControl Grid.Row="1" />
+            <components:ChatUserControl Grid.Row="2" />
+            <components:ChatMessageUserControl Grid.Row="3" />
+
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            
+            <components:StatsUserControl Grid.Row="0" />
+            <components:ItemsUserControl Grid.Row="1" />
+            <components:MapUserControl Grid.Row="2" />
+            <components:OptionsUserControl Grid.Row="3" />
+
+        </Grid>
+
+        
+    </Grid>
+</Window>
