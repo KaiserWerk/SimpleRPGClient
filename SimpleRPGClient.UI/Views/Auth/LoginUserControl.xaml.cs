@@ -44,13 +44,22 @@ public partial class LoginUserControl : UserControl
     public static readonly DependencyProperty LoginCommandProperty =
         DependencyProperty.Register(nameof(LoginCommand), typeof(ICommand), typeof(LoginUserControl), new PropertyMetadata(null));
 
-    public int ResetPasswordCommand
+    public int GoToResetPasswordCommand
     {
-        get { return (int)GetValue(ResetPasswordCommandProperty); }
-        set { SetValue(ResetPasswordCommandProperty, value); }
+        get { return (int)GetValue(GoToResetPasswordCommandProperty); }
+        set { SetValue(GoToResetPasswordCommandProperty, value); }
     }
 
-    public static readonly DependencyProperty ResetPasswordCommandProperty =
-        DependencyProperty.Register(nameof(ResetPasswordCommand), typeof(ICommand), typeof(LoginUserControl), new PropertyMetadata(null));
+    public static readonly DependencyProperty GoToResetPasswordCommandProperty =
+        DependencyProperty.Register(nameof(GoToResetPasswordCommand), typeof(ICommand), typeof(LoginUserControl), new PropertyMetadata(null));
+
+    public int GoToRegistrationCommand
+    {
+        get { return (int)GetValue(GoToRegistrationCommandProperty); }
+        set { SetValue(GoToRegistrationCommandProperty, value); }
+    }
+
+    public static readonly DependencyProperty GoToRegistrationCommandProperty =
+        DependencyProperty.Register(nameof(GoToRegistrationCommand), typeof(ICommand), typeof(LoginUserControl), new PropertyMetadata(null));
 
 }

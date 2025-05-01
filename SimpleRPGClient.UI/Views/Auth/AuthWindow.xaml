@@ -15,11 +15,20 @@
                                Email="{Binding Path=LoginEmail, Mode=OneWayToSource}" 
                                Password="{Binding Path=LoginPassword, Mode=OneWayToSource}"
                                LoginCommand="{Binding Path=LoginCommand}"
-                               ResetPasswordCommand="{Binding Path=LoginResetPasswordCommand}" />
+                               GoToResetPasswordCommand="{Binding Path=GoToResetPasswordCommand}"
+                               GoToRegistrationCommand="{Binding Path=GoToRegistrationCommand}"/>
 
-        <auth:RegisterUserControl Visibility="{Binding Path=ShowRegistration, Converter={StaticResource BoolToVisibilityConverter}}" />
+        <auth:RegisterUserControl Visibility="{Binding Path=ShowRegistration, Converter={StaticResource BoolToVisibilityConverter}}"
+                                  Email="{Binding Path=RegisterEmail, Mode=OneWayToSource}"
+                                  Password="{Binding Path=RegisterPassword, Mode=OneWayToSource}"
+                                  PasswordRepeat="{Binding Path=RegisterPasswordRepeat, Mode=OneWayToSource}"
+                                  RegisterAccountCommand="{Binding Path=RegisterAccountCommand}"
+                                  GoToLoginCommand="{Binding Path=GoToLoginCommand}"/>
 
-        <auth:ResetPasswordUserControl Visibility="{Binding Path=ShowPasswordReset, Converter={StaticResource BoolToVisibilityConverter}}" />
+        <auth:ResetPasswordUserControl Visibility="{Binding Path=ShowPasswordReset, Converter={StaticResource BoolToVisibilityConverter}}"
+                                       Email="{Binding Path=ResetPasswordEmail, Mode=OneWayToSource}"
+                                       SendResetEmailCommand="{Binding Path=SendResetEmailCommand}"
+                                       GoToLoginCommand="{Binding Path=GoToLoginCommand}"/>
 
     </Grid>
 </Window>
