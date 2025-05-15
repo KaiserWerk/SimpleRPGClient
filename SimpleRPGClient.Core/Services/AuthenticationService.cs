@@ -4,9 +4,16 @@ namespace SimpleRPGClient.Core.Services;
 
 public class AuthenticationService : IAuthenticationService
 {
+    private readonly HttpClient httpClient;
+
+    public AuthenticationService()
+    {
+        
+    }
+
     public async Task<LoginResponse> Login(LoginRequest request)
     {
-        throw new NotImplementedException();
+        
     }
 
     public async Task<LogoutResponse> Logout(LogoutRequest request)
@@ -29,7 +36,7 @@ public class AuthenticationService : IAuthenticationService
         throw new NotImplementedException();
     }
 
-    public async Task<SetNewPasswordResponse> InitiatePasswordReset(SetNewPasswordRequest request)
+    public async Task<SetNewPasswordResponse> SetNewPassword(SetNewPasswordRequest request)
     {
         throw new NotImplementedException();
     }
